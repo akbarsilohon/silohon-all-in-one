@@ -1,8 +1,10 @@
 <?php
 /**
  * Pengaturan di Admin panel silohon-related
- * @package silohon-related
- * @link https://github.com/akbarsilohon/silohon-related.git
+ * 
+ * @package silohon-all-in-one
+ * 
+ * @link https://github.com/akbarsilohon/silohon-all-in-one.git
  */
 
 add_action( 'admin_init', 'sl_re_settings_init' );

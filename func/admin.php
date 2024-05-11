@@ -48,6 +48,21 @@ add_action( 'admin_menu', function(){
         'sls_irp', 
         'sls_admin_irp'
     );
+
+
+    /**
+     * Header & footer panel controll
+     * 
+     * @package silohon-all-in-one
+     */
+    add_submenu_page( 
+        'sls_admin', 
+        'Inser Header & Footer', 
+        'Header & Footer', 
+        'manage_options', 
+        'sls_hnf', 
+        'sls_render_panel_header_and_footer' 
+    );
 });
 
 
@@ -83,6 +98,27 @@ function sls_admin_irp(){ ?>
         <form action="options.php" method="post" class="sl_re-form">
             <?php settings_fields( 'sl-re-settings' ); ?>
             <?php do_settings_sections( 'sls_irp' ); ?>
+            <?php submit_button('Save'); ?>
+        </form>
+    </div>
+
+    <div class="sl_re-sidebar">
+        <div class="sl_re-author"></div>
+    </div>
+</div>
+
+<?php
+}
+
+// Header & Footer
+function sls_render_panel_header_and_footer(){ ?>
+
+<div class="sl_re-container">
+    <div class="sl_re-content">
+        <h1 class="sl_re-h1">Insert HTML</h1>
+        <form action="options.php" method="post" class="sl_re-form">
+            <?php settings_fields( 'sl-hnf-settings' ); ?>
+            <?php do_settings_sections( 'sls_hnf' ); ?>
             <?php submit_button('Save'); ?>
         </form>
     </div>

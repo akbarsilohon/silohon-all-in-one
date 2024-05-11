@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Silohon All In One
  * Plugin URI: https://github.com/akbarsilohon/silohon-all-in-one.git
- * Version: 1.3.3
- * Description: All in one plugin, support Inline Related Posts, FAQs, Table of content, and Youtube Embed.
+ * Version: 1.3.4
+ * Description: All in one plugin, support Inline Related Posts, Inser HTML to header & footer, Shortcode for FAQs, Table of content, and Youtube Embed.
  * Tags: IRP, silohon, toc, faq, youtube
  * Author: Nur Akbar
  * Author URI: https://github.com/akbarsilohon
@@ -18,7 +18,8 @@ require plugin_dir_path( __FILE__ ) . '/func/shorcode.php';
 require plugin_dir_path( __FILE__ ) . '/func/core.php';
 require plugin_dir_path( __FILE__ ) . '/func/admin.php';
 require plugin_dir_path( __FILE__ ) . '/func/irp.php';
-require plugin_dir_path( __FILE__ ) . '/func/toc.php';
+require plugin_dir_path( __FILE__ ) . '/func/header-footer.php';
+// require plugin_dir_path( __FILE__ ) . '/func/toc.php';
 
 
 /**
