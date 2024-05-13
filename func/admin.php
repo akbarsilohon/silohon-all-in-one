@@ -171,6 +171,9 @@ function silohon_display_related_posts_meta_box($post) {
     <input type="checkbox" name="silohon_irp_disable" id="silohon_irp_disable" <?php checked($disable_silohon_irp, 'true'); ?> />
     <label for="silohon_irp_disable">Disable Silohon IRP</label><br>
 
+    <input type="checkbox" name="silohon_disable_toc" id="silohon_disable_toc" <?php checked($disable_silohon_toc, 'true'); ?> />
+    <label for="silohon_disable_toc">Disable Silohon TOC</label><br>
+
     <input type="checkbox" name="silohon_faq_meta" id="silohon_faq_meta" <?php checked($use_faq_meta, 'true'); ?>>
     <label for="silohon_faq_meta">Use FAQ Meta SEO</label><br>
 
