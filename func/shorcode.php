@@ -49,7 +49,7 @@ add_shortcode( 'add_faq', function( $atts, $content = null ){
     preg_match_all('/\[faq_q\](.*?)\[\/faq_q\](?:\s*<p>|\s*<\/p>)/s', $content, $question_matches);
     preg_match_all('/\[faq_a\](.*?)\[\/faq_a\](?:\s*<p>|\s*<\/p>)/s', $content, $answer_matches);
 
-    $ouput = '<style>.sl_newFaqs{margin-bottom:1rem}.sl_newFaqs .faqHeader{font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:10px 0;border-bottom:1px solid '.$faqValue.';margin-bottom:25px;font-size:16px;transition:.5s}.faqHeader span{word-wrap:break-word;line-height:25px}.faqHeader #faqToggle{background-color:'.$faqValue.';color:#fff;padding:5px 10px;font-weight:700;cursor:pointer}.sl_newFaqs .jawabFaq{display:none;transition:.5s}</style>';
+    $ouput = '<style>.sl_newFaqs{margin-bottom:1rem}.sl_newFaqs .faqHeader{font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:10px 0;border-bottom:1px solid '.$faqValue.';margin-bottom:25px;font-size:16px;transition:.5s}.faqHeader span{word-wrap:break-word;line-height:25px}.faqHeader #faqToggle{background-color:'.$faqValue.';color:#fff;padding:5px 10px;font-weight:700;cursor:pointer}.sl_newFaqs .jawabFaq{transition:.5s}</style>';
 
     $title_id = strtolower(str_replace(' ', '_', $title));
     $ouput .= '<h2 id="' . $title_id . '">' . $title . '</h2>';
@@ -62,7 +62,7 @@ add_shortcode( 'add_faq', function( $atts, $content = null ){
         $answer = trim($answer_matches[1][$i]);
 
         $ouput .= '<div class="faqHeader">';
-        $ouput .= '<span class"faqPertanyaan">' . esc_html( $question ) . '</span><span id="faqToggle">+</span>';
+        $ouput .= '<span class"faqPertanyaan">' . esc_html( $question ) . '</span><span id="faqToggle">-</span>';
         $ouput .= '</div>';
         $ouput .= '<p class="jawabFaq">'. $answer .'</p>';
     }
@@ -102,12 +102,12 @@ add_shortcode( 'add_faq', function( $atts, $content = null ){
         
             if( toggleButton.id === "faqToggle" ){
                 var answer = toggleButton.parentNode.nextElementSibling;
-                if( answer.style.display === "block" ){
-                    answer.style.display = "none";
-                    toggleButton.textContent = "+";
-                } else{
+                if( answer.style.display === "none" ){
                     answer.style.display = "block";
                     toggleButton.textContent = "-";
+                } else{
+                    answer.style.display = "none";
+                    toggleButton.textContent = "+";
                 }
             }
         });

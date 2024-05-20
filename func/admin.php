@@ -17,8 +17,8 @@ add_action( 'admin_menu', function(){
      * @package silohon-all-in-one
      */
     add_menu_page( 
-        'Silohon All In One', 
-        'Silohon All In One', 
+        'All In One', 
+        'All In One', 
         'manage_options', 
         'sls_admin', 
         'sls_admin_welcome',
@@ -71,7 +71,7 @@ function sls_admin_welcome(){ ?>
 
 <div class="sl_re-container">
     <div class="sl_re-content">
-        <h1 class="sl_re-h1">Silohon All In One</h1>
+        <h1 class="sl_re-h1">All In One</h1>
         <p class="sl_re-p">Next Update for this feature</p>
         <form action="options.php" method="post" class="sl_re-form">
             <?php settings_fields( 'sl-all-settings' ); ?>
@@ -153,7 +153,7 @@ if( !empty($options['active']) && $options['active'] === 'true' ){
 function silohon_add_related_posts_meta_box() {
     add_meta_box(
         'show_related_posts_meta_box',
-        'Silohon All In One',
+        'All In One',
         'silohon_display_related_posts_meta_box',
         'post',
         'side',

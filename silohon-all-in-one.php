@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Silohon All In One
  * Plugin URI: https://github.com/akbarsilohon/silohon-all-in-one.git
- * Version: 1.7.4
+ * Version: 1.8.5
  * Description: All in one plugin, support Inline Related Posts, Inser HTML to header & footer, Shortcode for FAQs, Table of content, and Youtube Embed.
  * Tags: IRP, silohon, toc, faq, youtube
  * Author: Nur Akbar
